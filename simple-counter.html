@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+<div class="col-lg-5 mx-auto">
+    <h4 class="text-center pt-4">Simple calculator</h4>
+    <div class="card mt-3 p-3">
+        <input type="text" class="form-control" id="num1" placeholder="Number one"><br>
+        <input type="text" class="form-control" id="num2" placeholder="Number one"><br>
+        <div class="btn">
+            <button onclick="sum()" id="" class="btn btn-success">Addition</button>
+            <button onclick="sub()" id="" class="btn btn-success">Substract</button>
+            <button onclick="mul()" id="" class="btn btn-success">Multiply</button>
+            <button onclick="dev()" id="" class="btn btn-success">Divide</button>
+        </div><br>
+        
+        <input type="text" name="" id="total" placeholder="Total" class="form-control">
+    </div>
+</div>
+
+
+<script>
+
+    function sum(){
+        var n1 = parseInt(document.getElementById('num1').value);
+        var n2 = parseInt(document.getElementById('num2').value);
+
+        document.getElementById('total').value=n1+n2;
+    }
+    function sub(){
+        var n1 = parseInt(document.getElementById('num1').value);
+        var n2 = parseInt(document.getElementById('num2').value);
+
+        document.getElementById('total').value=n1-n2;
+    }
+    function mul(){
+        var n1 = parseInt(document.getElementById('num1').value);
+        var n2 = parseInt(document.getElementById('num2').value);
+
+        document.getElementById('total').value=n1*n2;
+    }
+    function dev(){
+        var n1 = parseInt(document.getElementById('num1').value);
+        var n2 = parseInt(document.getElementById('num2').value);
+
+         document.getElementById('total').value=n1/n2;
+    }
+
+</script>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

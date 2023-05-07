@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JavaScrip</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<style>
+    .image{
+        width: 500px;
+        height: 300px;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    .image img{
+      width: 100%;
+      height: 100%; 
+    }
+    
+</style>
+<body>
+
+    <div class="col-lg-7 pt-5 mx-auto">
+       <div class="image">
+        <img id="img" src="images/animal1.jpg" class="" alt="">
+       </div>
+        
+        <button onclick="prev()" class="btn btn-success">Prev</button>
+        <button onclick="next()" class="btn btn-success">Next</button>
+    </div>
+<script>
+var photos = ["images/animal1.jpg","images/cam1.jpg","images/com11.jpg","images/com12.jpg"];
+
+var imgTag = document.querySelector("img");
+var count =0;
+
+const next =()=>{
+ count++;
+ 
+ if(count>=photos.length){
+   count=0;
+   imgTag.src=photos[count];
+ }else{
+    imgTag.src=photos[count];
+ }
+}
+const prev =()=>{
+   count--;
+   if(count<0){
+    count=photos.length-1;
+    imgTag.src=photos[count];
+   }else{
+    imgTag.src=photos[count];
+   }
+}
+
+</script>
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
